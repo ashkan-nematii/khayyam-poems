@@ -4,7 +4,7 @@ import json
 st.set_page_config(page_title="رباعیات خیام", layout="centered")
 
 # خواندن فایل اشعار
-with open("Poems.json", "r", encoding="utf-8") as f:
+with open("poems.json", "r", encoding="utf-8") as f:
     poems = json.load(f)
 
 st.title("رباعیات خیام")
@@ -36,4 +36,5 @@ if st.button("شعر بعدی"):
 
 # دکمه تفسیر
 if st.button("تفسیر رباعی"):
+
     st.info(current_poem["interpretation"])
